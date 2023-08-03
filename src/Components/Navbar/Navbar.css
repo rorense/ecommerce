@@ -46,6 +46,7 @@
     position: relative;
 }
 
+/* Targetting the number on the cart icon */
 .cartIcon > span {
     font: size 12px;
     width: 20px;
