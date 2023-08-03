@@ -1,5 +1,6 @@
 // Importing React-Router-Dom
-import {createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
+import {createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import "./app.css";
 // Importing components
 import Home from "./Pages/Home/Home";
 import Category from "./Pages/Category/category";
