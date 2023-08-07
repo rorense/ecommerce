@@ -9,7 +9,7 @@ function Slider() {
     // State Hooks
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Picture data
+    // Picture data stored as an array
     const data = [
         "https://images.pexels.com/photos/2229490/pexels-photo-2229490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "https://images.pexels.com/photos/839011/pexels-photo-839011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
