@@ -20,7 +20,7 @@ const Layout = () => {
   )
 }
 
-// Creating router component
+// Creating router components
 const router = createBrowserRouter ([
   // Home router
   {
