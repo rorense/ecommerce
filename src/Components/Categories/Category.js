@@ -2,6 +2,7 @@ import React from 'react';
 import "./Category.css"
 import { Link } from 'react-router-dom';
 
+// Category tabs
 function Category() {
   return (
     <div className='categories'>

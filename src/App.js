@@ -6,7 +6,7 @@ import Home from "./Pages/Home/Home";
 import Product from "./Pages/Product/product";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
-import Products from "./Pages/Category/Products";
+import Products from "./Pages/Products/Products";
 
 // Laying out the Navbar and footer component which will stick to every route
 const Layout = () => {
