@@ -3,10 +3,10 @@ import {createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import "./app.css";
 // Importing components
 import Home from "./Pages/Home/Home";
-import Category from "./Pages/Category/category";
 import Product from "./Pages/Product/product";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import Products from "./Pages/Category/Products";
 
 // Laying out the Navbar and footer component which will stick to every route
 const Layout = () => {
@@ -35,7 +35,7 @@ const router = createBrowserRouter ([
       // Category Route
       {
         path:"/products/:id",
-        element:<Category />
+        element:<Products />
       },
       // Product Route
       {

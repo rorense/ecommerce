@@ -12,7 +12,7 @@
     gap: 10px;
 }
 
-.row {
+.categories > .row {
     flex: 1;
     display: flex;
     gap: 10px;
@@ -20,7 +20,7 @@
     overflow: hidden;
 }
 
-.row > button {
+.categories > .row > button {
     position: absolute;
     min-width: 100px;
     height: 50px;
