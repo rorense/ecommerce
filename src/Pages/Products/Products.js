@@ -62,6 +62,7 @@ function Products() {
       <div className="right">
         <img className="catImg" src="https://images.pexels.com/photos/552784/pexels-photo-552784.jpeg?
         auto=compress&cs=tinysrgb&w=1600&h=750&dpr=2" alt="" />
+        {/* Reusing card component */}
         <List catId={ catId } maxPrice={ maxPrice } sort={ sort } />
       </div>
       
