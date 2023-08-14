@@ -4,7 +4,6 @@ import "./product.css"
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import BalanceIcon from '@mui/icons-material/Balance';
-import { Add } from '@mui/icons-material';
 
 // For individual product page
 function Product() {
@@ -35,7 +34,7 @@ function Product() {
 
       <div className="right">
         <h1>Title</h1>
-        <span>$199</span>
+        <span className='price'>$199</span>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quod laudantium. Quos impedit dolores odit eius illo? 
           Labore nihil sapiente quasi perspiciatis numquam explicabo ipsa et consequuntur, optio molestias quod?</p>
         <div className="quantity">
@@ -46,6 +45,26 @@ function Product() {
         <button className="add">
           <AddShoppingCartIcon /> ADD TO CART
         </button>
+        <div className="link">
+          <div className="item">
+            <FavoriteBorderIcon /> ADD TO WISHLIST
+          </div>
+          <div className="item">
+            <BalanceIcon /> ADD TO COMPARE
+          </div>
+        </div>
+        <div className="info">
+          <span>Vendor: Polo</span>
+          <span>Product Type: Shoes</span>
+          <span>Tag: Women, Men, Shoes</span>
+        </div>
+        <div className="details">
+          <span>DESCRIPTION</span>
+          <hr />
+          <span>ADDITIONAL INFORMATION</span>
+          <hr />
+          <span>FAQ</span>
+        </div>
       </div>
     </div>
   )
