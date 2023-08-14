@@ -1,0 +1,38 @@
+.product {
+    padding: 20px 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.product > .left {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.product > .left > .images {
+    flex: 1;
+}
+
+.product > .left > .images > img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.product > .left > .mainImg {
+    flex: 5;
+}
+
+.product > .left > .mainImg > img {
+    width: 500px;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.product > .right {
+    flex: 1;
+}
