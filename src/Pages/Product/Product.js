@@ -12,7 +12,7 @@ function Product() {
   const [selectedImg, setSelectedImg] = useState(0);
 
   // Use state for quantity
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const img = [
     "https://images.pexels.com/photos/5730956/pexels-photo-5730956.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -38,7 +38,7 @@ function Product() {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, quod laudantium. Quos impedit dolores odit eius illo? 
           Labore nihil sapiente quasi perspiciatis numquam explicabo ipsa et consequuntur, optio molestias quod?</p>
         <div className="quantity">
-          <button onClick={ ()=>setQuantity((prev)=>(prev === 0 ? 0: prev-1)) }>-</button>
+          <button onClick={ ()=>setQuantity((prev)=>(prev === 1 ? 1: prev-1)) }>-</button>
           { quantity }
           <button onClick={ ()=>setQuantity((prev)=>prev+1) }>+</button>
         </div>
@@ -53,12 +53,13 @@ function Product() {
             <BalanceIcon /> ADD TO COMPARE
           </div>
         </div>
+        <hr />
         <div className="info">
           <span>Vendor: Polo</span>
           <span>Product Type: Shoes</span>
           <span>Tag: Women, Men, Shoes</span>
         </div>
-        <div className="details">
+        <div className="info">
           <span>DESCRIPTION</span>
           <hr />
           <span>ADDITIONAL INFORMATION</span>
