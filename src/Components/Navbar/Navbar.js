@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
 // Importing icons from Material UI
@@ -7,9 +7,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Cart from '../Cart/Cart';
 
 // Navbar component
 function Navbar() {
+
+    // Cart component use state hook for opening and closing cart
+    const [open, setOpen] = useState(false);
+
   return (
     <div className='navbar'>
         <div className='wrapper'>
@@ -58,13 +63,16 @@ function Navbar() {
                     <SearchIcon />
                     <PersonOutlineIcon />
                     <FavoriteIcon />
-                    <div className="cartIcon">
+                    {/* On click action for cart */}
+                    <div className="cartIcon" onClick={ ()=> setOpen(!open) }>
                         <ShoppingCartIcon />
                         <span>0</span>
                     </div>
                 </div>
             </div>
         </div>
+        {/* If open, show Cart */}
+        { open && <Cart /> }
     </div>
   )
 }
