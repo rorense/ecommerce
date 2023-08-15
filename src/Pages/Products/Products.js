@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./Products.css";
 import List from '../../Components/List/List';
 import { useParams } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
 
 // Each individual product pages
 function Products() {
@@ -10,7 +11,11 @@ function Products() {
   // Sorting state
   const [maxPrice, setMaxPrice] = useState(1000)
   const [sort, setSort] = useState(null);
+  const [selectedSubCats, setSelectedSubCats] = useState([])
 
+  // fetching data from API with filter
+  const [data, loading, error] = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
+  console.log(data)
   return (
     <div className='products'>
 
@@ -18,20 +23,14 @@ function Products() {
       <div className="left">
         <div className="filterItem">
 
-          {/* Sort by category */}
+          {/* Sort by category looping through API items */}
           <h2>Product Categories</h2>
-            <div className="inputItem">
-              <input type="checkbox" id="1" value={ 1 } />
-              <label htmlFor="1">Shoes</label>
-            </div>
-            <div className="inputItem">
-              <input type="checkbox" id="2" value={ 2 } />
-              <label htmlFor="2">Skirts</label>
-            </div>
-            <div className="inputItem">
-              <input type="checkbox" id="3" value={ 3 } />
-              <label htmlFor="3">T-Shirt</label>
-            </div>
+            {data?.map((item)=> (
+              <div className="inputItem" key={item.id}>
+                <input type="checkbox" id={item.id} value={item.id} />
+                <label htmlFor={item.id}>{item.attributes.title}</label>
+              </div>
+            ))}
         </div>
 
         {/* Filter by price range */}
