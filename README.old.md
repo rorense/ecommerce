@@ -6,3 +6,5 @@ Tech Stack Used:
 
 - React
 - React-Router-DOM
+- React Hooks
+- Strapi API
