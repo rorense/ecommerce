@@ -7,4 +7,6 @@ Tech Stack Used:
 - React
 - React-Router-DOM
 - React Hooks
+- Flexbox
 - Strapi API
+- Axios

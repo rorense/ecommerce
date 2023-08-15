@@ -9,9 +9,9 @@ function Home() {
   return (
     <div className='home'>
       <Slider />
-      <FeaturedProduct type="Featured" />
+      <FeaturedProduct type="featured" />
       <Category />
-      <FeaturedProduct type="Trending" />
+      <FeaturedProduct type="trending" />
       <Contact />
     </div>
   )
