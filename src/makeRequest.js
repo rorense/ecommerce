@@ -5,4 +5,4 @@ export const makeRequest = axios.create({
     headers: {
         Authorization: "bearer " + process.env.REACT_APP_API_TOKEN,
     },
-})
+});

@@ -11,10 +11,10 @@ function Products() {
   // Sorting state
   const [maxPrice, setMaxPrice] = useState(1000)
   const [sort, setSort] = useState(null);
-  const [selectedSubCats, setSelectedSubCats] = useState([])
+  const [selectedSubCats, setSelectedSubCats] = useState([]);
 
   // fetching data from API with filter
-  const [data, loading, error] = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
+  const {data, loading, error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
   console.log(data)
   return (
     <div className='products'>

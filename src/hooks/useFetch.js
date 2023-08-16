@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { makeRequest } from "../makeRequest";
 
+// useFetch custom hook
 const useFetch = (url) => {
 
     // State hooks

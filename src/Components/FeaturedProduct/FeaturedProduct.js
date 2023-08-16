@@ -1,3 +1,4 @@
+import React from "react";
 import "./FeaturedProduct.css";
 import Card from '../Card/Card';
 import useFetch from '../../hooks/useFetch';
