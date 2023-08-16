@@ -15,7 +15,15 @@ function Products() {
 
   // fetching data from API with filter
   const {data, loading, error} = useFetch(`/sub-categories?[filters][categories][id][$eq]=${catId}`);
-  console.log(data)
+
+  // Category filter logic
+  const handleChange = (e) => {
+    const value = e.target.value;
+    const isChecked = e.target.checked;
+
+    setSelectedSubCats(isChecked ? [...selectedSubCats, value] : selectedSubCats.filter((item) => item !== value))
+  }
+
   return (
     <div className='products'>
 
@@ -27,7 +35,7 @@ function Products() {
           <h2>Product Categories</h2>
             {data?.map((item)=> (
               <div className="inputItem" key={item.id}>
-                <input type="checkbox" id={item.id} value={item.id} />
+                <input type="checkbox" id={item.id} value={item.id} onChange={ handleChange }/>
                 <label htmlFor={item.id}>{item.attributes.title}</label>
               </div>
             ))}
@@ -62,7 +70,7 @@ function Products() {
         <img className="catImg" src="https://images.pexels.com/photos/552784/pexels-photo-552784.jpeg?
         auto=compress&cs=tinysrgb&w=1600&h=750&dpr=2" alt="" />
         {/* Reusing card component */}
-        <List catId={ catId } maxPrice={ maxPrice } sort={ sort } />
+        <List catId={ catId } maxPrice={ maxPrice } sort={ sort } subCats={ selectedSubCats } />
       </div>
       
     </div>
