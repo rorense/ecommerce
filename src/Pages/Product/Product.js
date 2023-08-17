@@ -8,6 +8,7 @@ import useFetch from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cartReducer';
+import Cart from '../../Components/Cart/Cart';
 
 // For individual product page
 function Product() {
@@ -17,6 +18,9 @@ function Product() {
 
   // Use state for quantity
   const [quantity, setQuantity] = useState(1);
+
+  // Cart appears when add to cart is clicked
+  const [cartOpen, setCartOpen] = useState(false);
 
   const id = useParams().id;
 

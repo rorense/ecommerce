@@ -25,7 +25,7 @@ function Category() {
             <div className="row">
                     <div className="row">
                         <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
-                        <button><Link className="link" to="/products/1">Men</Link></button>
+                        <button><Link className="link" to="/products/2">Men</Link></button>
                     </div>
                     <div className="row">
                         <img src="https://images.pexels.com/photos/2442893/pexels-photo-2442893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
