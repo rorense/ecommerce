@@ -3,8 +3,6 @@ import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { removeItem, resetCart } from '../../redux/cartReducer';
-import { loadStripe } from '@stripe/stripe-js';
-import { makeRequest } from '../../makeRequest';
 
 function Cart() {
 
