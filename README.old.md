@@ -10,3 +10,4 @@ Tech Stack Used:
 - Flexbox
 - Strapi API
 - Axios
+- React Redux

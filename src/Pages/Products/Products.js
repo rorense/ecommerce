@@ -10,7 +10,7 @@ function Products() {
   const catId = parseInt(useParams().id);
   // Sorting state
   const [maxPrice, setMaxPrice] = useState(1000)
-  const [sort, setSort] = useState(null);
+  const [sort, setSort] = useState("asc");
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
   // fetching data from API with filter
