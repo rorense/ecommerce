@@ -8,12 +8,16 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Cart from '../Cart/Cart';
+import { useSelector } from 'react-redux';
 
 // Navbar component
 function Navbar() {
 
     // Cart component use state hook for opening and closing cart
     const [open, setOpen] = useState(false);
+
+    // Using Redux to keep track of the quantity in the cart
+    const products = useSelector((state) => state.cart.products);
 
   return (
     <div className='navbar'>
@@ -66,12 +70,12 @@ function Navbar() {
                     {/* On click action for cart */}
                     <div className="cartIcon" onClick={ ()=> setOpen(!open) }>
                         <ShoppingCartIcon />
-                        <span>0</span>
+                        <span>{ products.length }</span>
                     </div>
                 </div>
             </div>
         </div>
-        {/* If open, show Cart */}
+        {/* If open is true, show Cart */}
         { open && <Cart /> }
     </div>
   )
