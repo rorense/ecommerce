@@ -37,7 +37,7 @@ function Footer() {
         </div>
         <div className="bottom">
             <div className="left">
-                <span className="logo">Ryan Store</span>
+                <span className="logo">The Store</span>
                 <span className="copyright">© Copyright 2023. All Rights Reserved</span>
             </div>
             <div className="right">

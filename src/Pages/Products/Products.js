@@ -10,7 +10,7 @@ function Products() {
   const catId = parseInt(useParams().id);
   // Sorting state
   const [maxPrice, setMaxPrice] = useState(1000)
-  const [sort, setSort] = useState("asc");
+  const [sort, setSort] = useState("desc");
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
   // fetching data from API with filter
@@ -55,11 +55,11 @@ function Products() {
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="inputItem">
-            <input type="radio" id="asc" value="asc" name="price" onChange={ e=>setSort("asc") } />
+            <input type="radio" id="asc" value="asc" name="price" onChange={ (e)=>setSort("asc") } />
             <label htmlFor="asc">Price (Lowest first)</label>
           </div>
           <div className="inputItem">
-            <input type="radio" id="dsc" value="dsc" name="price" onChange={ e=>setSort("dsc") } />
+            <input type="radio" id="dsc" value="dsc" name="price" onChange={ (e)=>setSort("desc") } />
             <label htmlFor="dsc">Price (Highest first)</label>
           </div>
         </div>

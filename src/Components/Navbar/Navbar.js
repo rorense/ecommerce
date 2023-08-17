@@ -44,7 +44,7 @@ function Navbar() {
             </div>
             {/* The middle component */}
             <div className="center">
-                <Link className="link" to="/">Ryan Store</Link>
+                <Link className="link" to="/">The Store</Link>
             </div>
             {/* The right component */}
             <div className="right">

@@ -22,8 +22,9 @@
 }
 
 .center {
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 2px;
+    font-weight: 800;
 }
 
 .item > img {
