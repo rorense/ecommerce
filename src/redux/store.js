@@ -19,6 +19,7 @@ const persistConfig = {
   storage,
 }
 
+// Persisted Reducer for not losing progress when refreshed
 const persistedReducer = persistReducer(persistConfig, cartReducer)
 
 export const store = configureStore({
