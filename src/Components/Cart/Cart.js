@@ -3,6 +3,8 @@ import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { removeItem, resetCart } from '../../redux/cartReducer';
+import { loadStripe } from '@stripe/stripe-js';
+import { makeRequest } from '../../makeRequest';
 
 function Cart() {
 
@@ -18,6 +20,24 @@ function Cart() {
         });
         return total.toFixed(2);
     }
+
+    // // Connecting to Stripe API payment
+    // const stripePromise = loadStripe('pk_test_51Nfv4pI7uwQoieYNfUuKtcmWZlO2NRtE2hg7jFzJElY7OBGkhSBKFyKMbmvJk9I1vs1g7yYYjBE8qDPqv45wkoSe0053d1YlEu')
+    // const handlePayment = async() => {
+    //     try {
+    //         const stripe = await stripePromise;
+    //         const res = await makeRequest.post("/orders", {
+    //             products,
+    //         });
+
+    //         await stripe.redirectToCheckout({
+    //             sessionId: res.data.stripeSession.id,
+    //         });
+
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
 
   return (
     <div className="cart">
