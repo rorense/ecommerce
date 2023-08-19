@@ -22,6 +22,7 @@ function Product() {
   // Cart appears when add to cart is clicked
   const [cartOpen, setCartOpen] = useState(false);
 
+  // Getting id 
   const id = useParams().id;
 
   const { data, loading, error } = useFetch(
